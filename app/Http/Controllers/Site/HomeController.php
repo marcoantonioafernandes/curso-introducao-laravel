@@ -9,7 +9,7 @@ use App\Curso;
 class HomeController extends Controller
 {
     public function index(){
-        $cursos = Curso::all();
+        $cursos = Curso::paginate(4);
         return view('home', compact('cursos'));
     }
 }
